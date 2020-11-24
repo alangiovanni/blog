@@ -3,6 +3,7 @@
 ### E-mail: agmtargino@gmail.com
 ### Description: O Script possui a função de Adicionar template, Grupos de Host, Aplicações, Itens, itens dependentes e Triggers no Template definido na variável TEMPLATE_NAME.
 ### A comunicação com o Zabbix é feita via API.
+### Data: 30/10/2020
 
 function autenticacao() {
         JSON='
