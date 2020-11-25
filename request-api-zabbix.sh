@@ -377,9 +377,9 @@ function main() {
         if [ $(echo $master_itemid | grep "^[ [:digit:] ]*$") ]; then
                 # Caso seja um ID válido, é criado os itens filhos.
                 # Ordem dos parâmetros: Nome do Item dependente, Key, ID do item Pai, Tipo do dado, formula do preprocessamento (JSON) e ID da Aplicação
-                create_item_dependent "Temperatura" "request-api-weather.temperature" "$master_itemid" "3" "\$.results.condition_code" "$app_id"
+                create_item_dependent "Temperatura" "request-api-weather.temperature" "$master_itemid" "3" "\$.results.temp" "$app_id"
                 create_item_dependent "Descrição" "request-api-weather.description" "$master_itemid" "4" "\$.results.description" "$app_id"
-                create_item_dependent "Nome da Cidade" "request-api-weather.city_name" "$master_itemid" "4" "\$.results.city_name" "$app_id"
+                create_item_dependent "Cidade" "request-api-weather.city" "$master_itemid" "4" "\$.results.city" "$app_id"
         fi
 
         # Criando alerta
